@@ -128,7 +128,7 @@ body {
 
 #display { 
     height: 120px;
-    max-width: 85%;
+    max-width: 99%;
     margin: 0 auto;
     margin-top: 15px;
     background-color: #f1d481;
@@ -171,7 +171,6 @@ body {
     float: left;
     border-spacing: 0px;
     margin-left: 13px;
-    
     width: 55%;
 }
 
