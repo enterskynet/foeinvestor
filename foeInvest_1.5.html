@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="foe_style_1.5.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 align=center id="h1">FoE Investor</h1>
+
+    <div id="anzeigetafel">
+        <div  id="top1">Beteiligungs- Rechner</div>
+
+        <table id="table1" >
+
+            <tr id="z1">
+                <td id="bild_arche" width="10%"></td>
+                <td id="text1" width="60%" >Platzkosten eingeben</td>
+                <td width="40%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="1" value="" /></td>
+            </tr>
+
+            <tr id="z2">
+                <td height=10></td>
+            </tr>
+
+            <tr id="z1">
+                <td id="bild_roi"  width="20%"></td>
+                <td id="text1" width="60%">ROI eingeben</td>
+                <td width="30%" align="center" id="rahmen_eingabe"><input type="text" id="eingabe_roi" size="1" value="" /></td>
+            </tr>
+
+            <tr id="z2">
+                <td height=10></td>
+            </tr>
+
+            <tr id="z1">
+                <td id="bild_erntefp"  width="20%"></td>
+                <td id="text1" width="60%">Ernte FP eingeben</td>
+                <td width="30%" align="center" id="rahmen_eingabe"><input type="text" id="eingabe_ernte_fp" size="1" value="" /></td>
+            </tr>
+
+        </table>
+
+        <div align='center'>
+            <button style="width: 200px" id="berechnen_button" size="80" onclick="berechnen()">Berechnen</button>
+        </div>
+
+        <div id="display">
+            <div id="anzeige1"></div>
+           
+            
+            
+
+            <table id="table2_off">
+                <tr>
+                    <td id="zeile1" colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td id="table2_leerzeile"></td>
+                </tr>
+
+                <tr>
+                    <td id="kissenbild_off"></td>
+                    <td id="zeile2"></td> 
+                </tr>
+
+                <tr>
+                    <td id="table2_leerzeile"></td>
+                </tr>
+
+                <tr>
+                    <td id="warnung_inventar" colspan="2"></td>
+                </tr>
+
+
+
+
+
+            </table>
+
+
+
+            
+            
+        </div>
+
+        <script>
+            function berechnen() {
+    
+                var platzkosten = document.getElementById("eingabe_platzkosten").value;
+                var roi = document.getElementById("eingabe_roi").value;
+                var eingezahlte_ernte_fp = document.getElementById("eingabe_ernte_fp").value;
+                var min_ernte_fp = platzkosten - roi;
+                var benoetigte_inventar_fp = platzkosten - eingezahlte_ernte_fp;
+                var beteiligungs_verlust = platzkosten - roi;
+                var gewinn = eingezahlte_ernte_fp - beteiligungs_verlust;
+                var fp_zuwenig = platzkosten - eingezahlte_ernte_fp;
+
+                document.getElementById('kissenbild_off').id = 'kissenbild_on'
+                document.getElementById('table2_off').id = 'table2'
+                
+                
+    
+                // Gewinn Verlust Ausgabe
+                if (gewinn > -1){
+                    document.getElementById('anzeige1').id = 'anzeige2'
+                    document.getElementById('zeile1').innerHTML = "FP Gewinn"
+                    document.getElementById('zeile2').innerHTML = "+ " + gewinn              
+                    reload_button_hinzufuegen()
+
+                }   else {
+                    document.getElementById('anzeige1').id = 'anzeige3'
+                    document.getElementById('zeile1').innerHTML = "FP Verlust"
+                    document.getElementById('zeile2').innerHTML = gewinn
+                    reload_button_hinzufuegen()
+                    
+                }
+
+                if (fp_zuwenig > 0) {
+                    document.getElementById('warnung_inventar').id = 'warnung_inventar_on'
+                    document.getElementById('warnung_inventar_on').innerHTML = fp_zuwenig + " Inventar FP's werden verwendet !!!" 
+                }
+
+             
+    
+    
+            }
+    
+            
+            function reload_button_hinzufuegen() {
+                var parent = document.getElementById("anzeigetafel");
+                var neu_button = document.createElement("button");
+                neu_button.innerHTML = " Neue Berechnung";
+                
+                
+                neu_button.id = "neu_button";
+                neu_button.onclick = function(){reload()}
+                parent.appendChild(neu_button);
+                
+    
+            }
+            
+            
+            
+            
+            
+            function reload() {
+                location.reload();
+                return false;
+    
+                
+    
+                
+             
+                
+                
+         
+                
+             
+                
+    
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
