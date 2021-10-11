@@ -56,8 +56,9 @@
             
 
             <table id="table2_off">
+                
                 <tr>
-                    <td id="zeile1" colspan="2"></td>
+                    <td id="zeile1_off" colspan="2"></td>
                 </tr>
 
                 <tr>
@@ -66,7 +67,7 @@
 
                 <tr>
                     <td id="kissenbild_off"></td>
-                    <td id="zeile2"></td> 
+                    <td id="zeile2_off"></td> 
                 </tr>
 
                 <tr>
@@ -110,7 +111,12 @@
                 // Gewinn Verlust Ausgabe
                 if (gewinn > -1){
                     document.getElementById('anzeige1').id = 'anzeige2'
+                    document.getElementById('zeile1_off').id = 'zeile1'
                     document.getElementById('zeile1').innerHTML = "FP Gewinn"
+    
+                    document.getElementById('zeile2_off').id = 'zeile2'
+
+                    
                     document.getElementById('zeile2').innerHTML = "+ " + gewinn              
                     reload_button_hinzufuegen()
 
