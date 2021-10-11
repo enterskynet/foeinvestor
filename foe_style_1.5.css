@@ -139,13 +139,15 @@ body {
 }
 
 #anzeige1 { /* Startanzeige */
-    margin-top: 5px;
     height: 100px;
-    margin-left: 150px;
+    width: 100px;
+    transform: rotate(-70deg);
+    margin-top: 5px;
+    margin-left: 70%;
     background-image: url('pfeil1.png');
     background-size: contain;
     background-repeat: no-repeat;
-    transform: rotate(-70deg);
+    
 }
 
 #anzeige2 { /* Anzeige positiv */
