@@ -50,6 +50,7 @@
         </div>
 
         <div id="display">
+
             <div id="anzeige1"></div>
            
             
@@ -77,12 +78,14 @@
                 <tr>
                     <td id="warnung_inventar" colspan="2"></td>
                 </tr>
-
+           
 
 
 
 
             </table>
+
+    
 
 
 
@@ -92,7 +95,8 @@
 
         <script>
             function berechnen() {
-    
+               
+                
                 var platzkosten = document.getElementById("eingabe_platzkosten").value;
                 var roi = document.getElementById("eingabe_roi").value;
                 var eingezahlte_ernte_fp = document.getElementById("eingabe_ernte_fp").value;
@@ -102,9 +106,17 @@
                 var gewinn = eingezahlte_ernte_fp - beteiligungs_verlust;
                 var fp_zuwenig = platzkosten - eingezahlte_ernte_fp;
 
+                // Ausgaben
                 document.getElementById('kissenbild_off').id = 'kissenbild_on'
-                
                 document.getElementById('table2_off').id = 'table2'
+
+                // Button auf Neu (funktion) setzten
+                document.getElementById('berechnen_button').innerHTML = "Neu"
+                document.getElementById('berechnen_button').onclick = function(){reload()}
+
+
+
+              
                 
                 
     
@@ -115,16 +127,22 @@
                     document.getElementById('zeile1').innerHTML = "FP Gewinn"
     
                     document.getElementById('zeile2_off').id = 'zeile2'
+                    document.getElementById('zeile2').innerHTML = "+ " + gewinn    
 
+                
+
+                  
                     
-                    document.getElementById('zeile2').innerHTML = "+ " + gewinn              
-                    reload_button_hinzufuegen()
+                    
+                  
 
                 }   else {
                     document.getElementById('anzeige1').id = 'anzeige3'
+                    document.getElementById('zeile1_off').id = 'zeile1'
                     document.getElementById('zeile1').innerHTML = "FP Verlust"
+                    document.getElementById('zeile2_off').id = 'zeile2'
                     document.getElementById('zeile2').innerHTML = gewinn
-                    reload_button_hinzufuegen()
+                   
                     
                 }
 
@@ -138,27 +156,28 @@
     
             }
     
-            
+            /*
             function reload_button_hinzufuegen() {
-                var parent = document.getElementById("anzeigetafel");
+                var parent = document.getElementById("table1");
                 var neu_button = document.createElement("button");
                 neu_button.innerHTML = " Neue Berechnung";
+           
                 
                 
-                neu_button.id = "neu_button";
+                neu_button.id = "berechnen_button";
                 neu_button.onclick = function(){reload()}
                 parent.appendChild(neu_button);
                 
     
             }
-            
-            
-            
-            
+            */
             
             function reload() {
+
+                
                 location.reload();
                 return false;
+                
     
                 
     
