@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>  
+        <td></td>
+        <tr id="z1">
+            <td id="text1" width="60%" >Platzkosten eingeben</td>
+            <td width="40%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" /></td>
+        </tr>
+
+        <tr id="z2">
+            <td height=10></td>
+        </tr>
+
+        <tr id="z1">
+            <td id="text1" width="60%" >Roi eingeben eingeben</td>
+            <td width="40%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_roi" size="4" value=""/></td>
+        </tr>
+
+        
+                
+
+    </table>
+
+    <div align='center'>
+        <button style="width: 200px" id="berechnen_button" size="80" onclick="berechnen()">Berechnen</button>
+    </div>
+
+
+    <table id="table2_off">
+                
+        <tr>
+            <td id="zeile1_off"></td>
+        </tr>
+   
+    </table>
+
+    <script>
+
+        /* Test Auto Valid */
+
+        var changed = false; 
+        var textarea = document.getElementById('eingabe_roi');
+        textarea.onchange = function() {
+            var response = document.getElementById('zeile1_off');
+            response.innerHTML = "Der Text wurde geändert";
+            changed = true;
+        }
+        textarea.onblur = function() {
+            var response = document.getElementById('zeile1_off');
+            if (changed === false) response.innerHTML = "Der Text wurde nicht geändert";
+        }
+
+
+
+        function berechnen() {
+
+            var platzkosten = parseInt(document.getElementById('eingabe_platzkosten').value);
+            var roi = parseInt(document.getElementById('eingabe_roi').value);
+            var ausgabe_test = platzkosten + roi;
+
+            document.getElementById('zeile1_off').innerHTML = ausgabe_test
+
+
+            
+
+
+
+
+
+
+        }
+
+    
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

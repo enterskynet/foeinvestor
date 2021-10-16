@@ -48,7 +48,15 @@ body {
     background-color: none;
 }
 
+#min_ernte_fp {
+    font-size: 10px;
+    font-family: Helvetica;
+    color: #e9be51;
+    text-align: right;
+    margin-right: 3%;
     
+
+}    
 
 
 #text1{
@@ -59,6 +67,7 @@ body {
     padding-left: 7px;
     color: #e9be51;
     font-family: Helvetica;
+    font-size: 13px;
 }
 
 #rahmen_eingabe {
@@ -89,7 +98,7 @@ body {
     border-color: gold;
     border-right: none;
     background-image: url(arche1.png);
-    background-size: 30px;
+    background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -100,7 +109,7 @@ body {
     border-color: gold;
     border-right: none;
     background-image: url(truhe1.png);
-    background-size: 28px;
+    background-size: 23px;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -111,7 +120,7 @@ body {
     border-color: gold;
     border-right: none;
     background-image: url(kissen3.png);
-    background-size: 30px;
+    background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
     

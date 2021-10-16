@@ -1,0 +1,10 @@
+body {
+    background-color: aliceblue;
+}
+
+#zeile1_off {
+    height: 15px;
+    width: 40px;
+    background-color: rgb(233, 196, 76);
+    padding-left: px;
+}
