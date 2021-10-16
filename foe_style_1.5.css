@@ -46,6 +46,12 @@ body {
 
 #z2 {
     background-color: none;
+    
+}
+
+#min_warnung_zeile {
+    
+
 }
 
 #min_ernte_fp {
@@ -136,7 +142,7 @@ body {
 /*........................................... Ausgabebereich...................................................*/
 
 #display { 
-    height: 120px;
+    height: 140px;
     max-width: 90%;
     margin: 0 auto;
     margin-top: 15px;
