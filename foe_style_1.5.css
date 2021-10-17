@@ -31,7 +31,7 @@ body {
 
 #top2 { /*Titelbalken*/
     height: 18px;   
-    background-color: #393d49;
+    background-color: #2f1a0c;
     font-family: Helvetica;
     font-size: 11px;
     padding-top: 10px;
@@ -135,7 +135,7 @@ body {
     border: 1px solid;
     border-color: gold;
     border-right: none;
-    background-image: url(kissen3.png);
+    background-image: url(fp_f1.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
