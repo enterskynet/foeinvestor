@@ -2,6 +2,11 @@ body {
     background-image: url("foe_back.jpg");
 }
 
+:root {
+    --golrahmen:#e2a124;
+
+  }
+
 #h1 {
     font-family: Helvetica;
     font-size: 30px;
@@ -30,7 +35,7 @@ body {
 }
 
 #top2 { /*Titelbalken*/
-    height: 18px;   
+    height: 22px;   
     background-color: #2f1a0c;
     font-family: Helvetica;
     font-size: 11px;
@@ -39,12 +44,10 @@ body {
     text-align: center;
 }
 
-
 #table1 { /* Eingabetabelle*/
     width: 98%;
     margin: 0 auto;
     margin-left: 2%;
-    padding-top: 5%;
     border-spacing: 0; 
 }
     
@@ -55,12 +58,10 @@ body {
 }
 
 #z2 {
-    background-color: none;
-    
+    background-color: none;   
 }
 
 #min_warnung_zeile {
-    
 
 }
 
@@ -70,16 +71,11 @@ body {
     color: #e9be51;
     text-align: right;
     margin-right: 3%;
-    
-
 }    
 
-
 #text1{
-    
-    
+    border-color: var(--golrahmen);
     border: 1px solid;
-    border-color: gold;
     padding-left: 7px;
     color: #e9be51;
     font-family: Helvetica;
@@ -88,9 +84,8 @@ body {
 
 #rahmen_eingabe {
     border: 1px solid;
-    border-color: gold;
+    border-color: var(--golrahmen);
     border-left: none;
-
 }
 
 #text2{
@@ -111,42 +106,38 @@ body {
 
 #bild_arche {
     border: 1px solid;
-    border-color: gold;
+    border-color: var(--golrahmen);
     border-right: none;
     background-image: url(arche1.png);
-    background-size: 25px;
+    background-size: 33px;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: center; 
 }
 
 #bild_roi {
     border: 1px solid;
-    border-color: gold;
+    border-color: var(--golrahmen);
     border-right: none;
-    background-image: url(truhe1.png);
-    background-size: 23px;
+    background-image: url(truhe_f1.png);
+    background-size: 28px;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: center;  
 }
 
 #bild_erntefp {
     border: 1px solid;
-    border-color: gold;
+    border-color: var(--golrahmen);
     border-right: none;
-    background-image: url(fp_f1.png);
-    background-size: 25px;
+    background-image: url(fp_f2.png);
+    background-size: 30px;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: center;  
 }
 
 #berechnen_button {
     margin-top: 20px;
     background-color: darkorange;
     color: floralwhite;
-
 }
 
 /*........................................... Ausgabebereich...................................................*/
@@ -171,12 +162,10 @@ body {
     margin-left: 60%;
     background-image: url('pfeil1.png');
     background-size: contain;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;   
 }
 
 #anzeige2 { /* Anzeige positiv */
-
     height: 80px;
     width: 80px;
     background-image: url('schild_gruen.png');
@@ -185,13 +174,7 @@ body {
     margin-top: 10px;
     float: left;
     margin-left: 13px;
-
 }
-
-
-
-
-
 
 #table2 {
     margin-top: 4%;
@@ -201,10 +184,7 @@ body {
     width: 55%;
 }
 
-
-
 #zeile1 {
-    
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     color: #936538; 
@@ -213,14 +193,11 @@ body {
     background-color: snow;
     padding-left: 10px;
     border: 1px solid #e9be51
-  
 }
 
 #table2_leerzeile {
-
     height: 5px;
-    background-color: none;
-    
+    background-color: none;  
 }
 
 #warnung_inventar_on {
@@ -229,32 +206,23 @@ body {
     color: snow; 
     font-size: 11px;
     padding-left: 9px;
-
     background-color: red;
 }
   
-
-
-
 #kissenbild_on {
-   
-
-    width: 35px;
-    height: 35px;
+    height: 40px;
     background-color: snow;
-    background-image: url(kissen3.png);
+    background-image: url(kissen_f1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding-left: 10px;
+    padding-left: 18px;
     border: 1px solid #e9be51;
     border-right: none;
-    
 }
 
 #zeile2 {
-   
-    background-color: snow;
+    background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #936538; 
@@ -262,51 +230,26 @@ body {
     font-style: normal; font-weight: 600;
     border: 1px solid #e9be51;
     border-left: none;
-  
 }
 
-
-
 #anzeige3 { 
-    
-
     height: 80px;
     width: 80px;
     margin-top: 10px;
     background-image: url('schild_rot.png');
-
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
     margin-left: 13px;
-
 }
 
-
-#neu_button {
-    
+#neu_button {    
     width: 50%;
     height: 22px;
-    /*margin-top: 15px;*/
     margin: 7% 25%;
-    
-  
-
-    
-    
     background-color: darkorange;
-    color: floralwhite;
-    
+    color: floralwhite; 
 }
-
-
-
-
-
-
-
-
-
 
 
 
