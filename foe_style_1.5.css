@@ -100,7 +100,10 @@ body {
 
 #berechnen_button {
     margin-top: 10px;
-    background-color: darkorange;
+    height: 25px;
+    border-radius: 2px;
+
+    background: linear-gradient(to bottom,#ecc92c,   #6b4008, #6b1f08, #f19f24); 
     color: floralwhite;
 }
 
@@ -138,6 +141,9 @@ body {
     margin-top: 20px;
     background-color: darkorange;
     color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;
+    fon
 }
 
 /*........................................... Ausgabebereich...................................................*/
@@ -188,7 +194,7 @@ body {
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     color: #936538; 
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal; font-weight: 600;
     background-color: snow;
     padding-left: 10px;

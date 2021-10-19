@@ -21,7 +21,9 @@
             <tr id="z1"> 
                 <td id="bild_arche" width="15%"></td>
                 <td id="text1" width="70%" >Platzkosten eingeben</td>
+
                 <td width="40%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" /></td>
+                
             </tr>
 
             <tr id="z2">
@@ -33,6 +35,7 @@
                 <td id="text1">Mäzen Belohnung eingeben</td>
                 <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_roi" size="4" value="" /></td>
             </tr>
+            
 
             <tr id="z2">
                 <td height=10 colspan="3" id="min_warnung_zeile">  <p id="min_ernte_fp" ></p>  </td>
@@ -41,7 +44,7 @@
             <tr id="z1">
                  
                 <td id="bild_erntefp"></td>
-                <td id="text1">Ernte FP eingeben</td>
+                <td id="text1">Ernte FP-Stand eingeben</td>
                 <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_ernte_fp" size="4" value="" /></td>
             </tr>
 
@@ -94,7 +97,7 @@
             var roi = document.getElementById("eingabe_roi").value;
             var min_ernte_fp = platzkosten - roi;
             var response = document.getElementById('min_ernte_fp');
-            response.innerHTML = "min benötigt " + min_ernte_fp + " FP's";
+            response.innerHTML = "min benötigt Ernte FP's " + min_ernte_fp + " Ernte FP's";
             changed = true;
         }
 
@@ -134,7 +137,7 @@
                 if (gewinn > -1){
                     document.getElementById('anzeige1').id = 'anzeige2'
                     document.getElementById('zeile1_off').id = 'zeile1'
-                    document.getElementById('zeile1').innerHTML = "FP Gewinn"
+                    document.getElementById('zeile1').innerHTML = "Inventar Gewinn"
     
                     document.getElementById('zeile2_off').id = 'zeile2'
                     document.getElementById('zeile2').innerHTML = "+ " + gewinn    
@@ -149,7 +152,7 @@
                 }   else {
                     document.getElementById('anzeige1').id = 'anzeige3'
                     document.getElementById('zeile1_off').id = 'zeile1'
-                    document.getElementById('zeile1').innerHTML = "FP Verlust"
+                    document.getElementById('zeile1').innerHTML = "Inventar FP Verlust"
                     document.getElementById('zeile2_off').id = 'zeile2'
                     document.getElementById('zeile2').innerHTML = gewinn
                    
@@ -158,7 +161,7 @@
 
                 if (fp_zuwenig > 0) {
                     document.getElementById('warnung_inventar').id = 'warnung_inventar_on'
-                    document.getElementById('warnung_inventar_on').innerHTML = fp_zuwenig + " Inventar FP's werden verwendet !!!" 
+                    document.getElementById('warnung_inventar_on').innerHTML = fp_zuwenig + " Inventar FP werden verwendet !!!" 
                 }
 
              
