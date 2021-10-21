@@ -61,17 +61,15 @@ body {
     background-color: none;   
 }
 
-#min_warnung_zeile {
-
-}
-
 #min_ernte_fp {
-    font-size: 10px;
+    font-size: 10.5px;
     font-family: Helvetica;
     color: #e9be51;
     text-align: right;
     margin-right: 3%;
 }    
+
+
 
 #text1{
     border-color: var(--golrahmen);
@@ -99,12 +97,13 @@ body {
 }
 
 #berechnen_button {
-    margin-top: 10px;
+    margin-top: 20px;
     height: 25px;
     border-radius: 2px;
-
     background: linear-gradient(to bottom,#ecc92c,   #6b4008, #6b1f08, #f19f24); 
     color: floralwhite;
+    font-size: 15px;
+    font-weight: bolder;  
 }
 
 #bild_arche {
@@ -137,15 +136,6 @@ body {
     background-position: center;  
 }
 
-#berechnen_button {
-    margin-top: 20px;
-    background-color: darkorange;
-    color: floralwhite;
-    font-size: 15px;
-    font-weight: bolder;
-    fon
-}
-
 /*........................................... Ausgabebereich...................................................*/
 
 #display { 
@@ -172,22 +162,33 @@ body {
 }
 
 #anzeige2 { /* Anzeige positiv */
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     background-image: url('schild_gruen.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 10px;
+    margin-top: 4px;
     float: left;
-    margin-left: 13px;
+    margin-left: 9px;
+}
+
+#anzeige3 { 
+    height: 70px;
+    width: 70px;
+    margin-top: 4px;
+    background-image: url('schild_rot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 9px;
 }
 
 #table2 {
     margin-top: 4%;
     float: left;
     border-spacing: 0px;
-    margin-left: 13px;
-    width: 55%;
+    margin-left: 5%;
+    width: 60%;
 }
 
 #zeile1 {
@@ -216,38 +217,49 @@ body {
 }
   
 #kissenbild_on {
-    height: 40px;
+    height: 35px;
+    width: 35px;
     background-color: snow;
     background-image: url(kissen_f1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding-left: 18px;
+    padding-left: 20px;
     border: 1px solid #e9be51;
     border-right: none;
 }
 
 #zeile2 {
+    width: 28%;
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    text-align: right;
+    padding-right: 5px;
     color: #936538; 
-    font-size: 20px;
+    font-size: 22px;
     font-style: normal; font-weight: 600;
     border: 1px solid #e9be51;
     border-left: none;
+    border-right: none;
 }
 
-#anzeige3 { 
-    height: 80px;
-    width: 80px;
-    margin-top: 10px;
-    background-image: url('schild_rot.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    float: left;
-    margin-left: 13px;
+#txt_fp {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-top: 5px;
+    color: #936538; 
+    font-size: 16px;
+    font-style: normal; font-weight: 550;
+    ;
+    
+    border: 1px solid #e9be51;
+    border-left: none;
+    
+
 }
+
+
 
 #neu_button {    
     width: 50%;

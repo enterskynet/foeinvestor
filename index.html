@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" type="text/css" href="foe_style_1.5.css">
+    <link rel="icon" href="fp_favi1.ico" type="image/x-icon">
     <title>FoE Investor</title>
 </head>
 <body>
@@ -60,7 +61,7 @@
             <table id="table2_off">
                 
                 <tr>
-                    <td id="zeile1_off" colspan="2"></td>
+                    <td id="zeile1_off" colspan="3"></td>
                 </tr>
 
                 <tr>
@@ -70,6 +71,7 @@
                 <tr>
                     <td id="kissenbild_off"></td>
                     <td id="zeile2_off"></td> 
+                    <td id="txt_fp_off"></td>
                 </tr>
 
                 <tr>
@@ -77,7 +79,7 @@
                 </tr>
 
                 <tr>
-                    <td id="warnung_inventar" colspan="2"></td>
+                    <td id="warnung_inventar" colspan="3"></td>
                 </tr>
            
             </table>           
@@ -97,7 +99,7 @@
             var roi = document.getElementById("eingabe_roi").value;
             var min_ernte_fp = platzkosten - roi;
             var response = document.getElementById('min_ernte_fp');
-            response.innerHTML = "min benötigt Ernte FP's " + min_ernte_fp + " Ernte FP's";
+            response.innerHTML = "min benötigt Ernte FP =    " + min_ernte_fp;
             changed = true;
         }
 
@@ -138,23 +140,21 @@
                     document.getElementById('anzeige1').id = 'anzeige2'
                     document.getElementById('zeile1_off').id = 'zeile1'
                     document.getElementById('zeile1').innerHTML = "Inventar Gewinn"
-    
                     document.getElementById('zeile2_off').id = 'zeile2'
-                    document.getElementById('zeile2').innerHTML = "+ " + gewinn    
+                    document.getElementById('zeile2').innerHTML = "+ " + gewinn   
+                    document.getElementById('txt_fp_off').id = 'txt_fp'
+                    document.getElementById('txt_fp').innerHTML = "FP "  
 
-                
-
-                  
                     
-                    
-                  
 
                 }   else {
                     document.getElementById('anzeige1').id = 'anzeige3'
                     document.getElementById('zeile1_off').id = 'zeile1'
-                    document.getElementById('zeile1').innerHTML = "Inventar FP Verlust"
+                    document.getElementById('zeile1').innerHTML = "Inventar Verlust"
                     document.getElementById('zeile2_off').id = 'zeile2'
                     document.getElementById('zeile2').innerHTML = gewinn
+                    document.getElementById('txt_fp_off').id = 'txt_fp'
+                    document.getElementById('txt_fp').innerHTML = "FP " 
                    
                     
                 }
