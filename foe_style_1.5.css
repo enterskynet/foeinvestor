@@ -26,27 +26,44 @@ body {
 }
 
 #top1 { /*Titelbalken*/
-    height: 25px;   
+    height: 38px;  
+
     background-color: #6b1f08;
     font-family: Helvetica;
-    padding-top: 10px;
+    padding-top: 8px;
     color: #fdd0b3;
-    text-align: center;
+}
+
+#top_titel {
+    float: left;
+
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 2px;
+
+}
+
+#info_button {
+    float: right;
+    margin-right: 7px;
+    margin-top: -2px;
 }
 
 #top2 { /*Titelbalken*/
-    height: 22px;   
+    height: 25px;
+    margin-top: -10px;
     background-color: #2f1a0c;
     font-family: Helvetica;
-    font-size: 11px;
-    padding-top: 10px;
+    font-size: 12px;
+
     color: #f3e6c1;
     text-align: center;
+    padding-top: 2px;
 }
 
 #table1 { /* Eingabetabelle*/
     width: 98%;
-    margin: 0 auto;
+    margin-top: 10px;
     margin-left: 2%;
     border-spacing: 0; 
 }
@@ -69,20 +86,33 @@ body {
     margin-right: 3%;
 }    
 
-
-
-#text1{
+.fp {
     border-color: var(--golrahmen);
     border: 1px solid;
-    padding-left: 7px;
+    border-left: none;
+
     color: #e9be51;
     font-family: Helvetica;
     font-size: 13px;
 }
 
+
+
+
+
+#text1{
+    border-color: var(--golrahmen);
+    border: 1px solid;
+    padding-left: 3px;
+    color: #e9be51;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
 #rahmen_eingabe {
     border: 1px solid;
     border-color: var(--golrahmen);
+    border-right: none;
     border-left: none;
 }
 
@@ -269,6 +299,89 @@ body {
     color: floralwhite; 
 }
 
+/*........................................... Hilfebox .................................*/
+
+#hilfebox { 
+    height: 480px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 0px;
+    background-color: #372415;
+    border-style: groove;
+    border-color: #936538;
+    border-width: 7px;
+    border-radius: 10px;
+}
+
+#info_button {
+    background: none;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 15px;
+    color: whitesmoke;
+    margin-left: 50px;
+    
+
+}
+
+
+.beschreibung {
+    font-size: 10px;
+    font-weight: lighter;
+    color: whitesmoke;
+    margin-top: 2px;
+}
+
+
+
+.infotitel {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: darkorange;
+}
+
+
+#platzkosten_bild {
+    width: 200px;
+    height: 90px;
+    margin-top: 10px;
+    background-color: tomato;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(platzkosten.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#maezen_bild {
+    width: 200px;
+    height: 90px;
+    margin-top: 10px;
+    background-color: tomato;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(maezen.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#ernte_bild {
+    width: 200px;
+    height: 90px;
+    margin-top: 10px;
+    background-color: tomato;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(ernte.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 
 
 

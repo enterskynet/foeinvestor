@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" type="text/css" href="foe_style_1.5.css">
-    <link rel="icon" href="fp_favi1.ico" type="image/x-icon">
+    
+    
     <title>FoE Investor</title>
 </head>
 <body>
@@ -14,17 +15,30 @@
     <h1 align=center id="h1">FoE Investor</h1>
 
     <div id="anzeigetafel"> 
-        <div  id="top1">LG Beteiligungs-Monitor</div>
-        <div  id="top2">Überprüfe deine Beteiligungen an anderen LG's</div>
+
+        <div id="top1">
+            <p id="top_titel">LG Beteiligungs Monitor</p>
+            <div><button id="info_button" onclick="infobox_erstellen()">?</button>
+            </div>
+
+            
+        </div>
+
+
+            
+        <div  id="top2">
+            <p>Überprüfe hier deine LG- Beteiligung</p>
+
+        </div>
 
         <table id="table1" >
 
             <tr id="z1"> 
-                <td id="bild_arche" width="15%"></td>
+                <td id="bild_arche" width="18%"></td>
                 <td id="text1" width="70%" >Platzkosten eingeben</td>
 
-                <td width="40%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" /></td>
-                
+                <td width="10%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" /></td>
+                <td class="fp">FP</td>
             </tr>
 
             <tr id="z2">
@@ -35,6 +49,7 @@
                 <td id="bild_roi"></td>
                 <td id="text1">Mäzen Belohnung eingeben</td>
                 <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_roi" size="4" value="" /></td>
+                <td class="fp">FP</td>
             </tr>
             
 
@@ -47,6 +62,7 @@
                 <td id="bild_erntefp"></td>
                 <td id="text1">Ernte FP-Stand eingeben</td>
                 <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_ernte_fp" size="4" value="" /></td>
+                <td class="fp">FP</td>
             </tr>
 
         </table>
@@ -82,7 +98,14 @@
                     <td id="warnung_inventar" colspan="3"></td>
                 </tr>
            
-            </table>           
+            </table>        
+            
+     
+
+          
+
+
+
         </div>
 
         <script>
@@ -163,13 +186,115 @@
                     document.getElementById('warnung_inventar').id = 'warnung_inventar_on'
                     document.getElementById('warnung_inventar_on').innerHTML = fp_zuwenig + " Inventar FP werden verwendet !!!" 
                 }
-
-             
-    
-    
             }
+
+
+
     
+    
+ /*................................... Infobox ...............................................*/
+
+            function infobox_erstellen() {
+                    var del_anzeigetafel = document.getElementById('anzeigetafel');
+                    del_anzeigetafel.remove(); // anzeigetafel entfernen
+                    var parent = document.getElementById("h1");
+                    var infobox = document.createElement("div");
+                    infobox.id = "hilfebox";
+                    parent.appendChild(infobox); // infobox erzeugen
+                    // schliessen button mit funktion
+                    var parent = document.getElementById('hilfebox');
+                    var schliessen_button = document.createElement('button');
+                    schliessen_button.innerHTML ="Schliessen";
+                    schliessen_button.onclick = function(){
+                        var del_hilfebox = document.getElementById('hilfebox');
+                        del_hilfebox.remove();
+                        reload()
+                    } 
+                    parent.appendChild(schliessen_button);
+
+                    // Platzkosten
+                    var parent = document.getElementById("hilfebox");
+                    var infotext1 = document.createElement("p");
+                    infotext1.innerHTML = "Platzkosten eingeben";
+                    infotext1.id = "infotext1";
+                    infotext1.className = "infotitel";
+                    parent.appendChild(infotext1);
+
+                    var parent = document.getElementById("infotext1");
+                    var beschreibung1 = document.createElement("p");
+                    beschreibung1.innerHTML = "FP für den gewählten Platz";
+                    beschreibung1.id = "beschreibung1";
+                    beschreibung1.className = "beschreibung";
+                    parent.appendChild(beschreibung1);
+
+                    var parent = document.getElementById("infotext1");
+                    var platzkosten_bild = document.createElement("div");
+                    platzkosten_bild.id = "platzkosten_bild";
+                    parent.appendChild(platzkosten_bild);
+
+                    // Mäzenbelohnung
+                    var parent = document.getElementById("infotext1");
+                    var infotext2 = document.createElement("p");
+                    infotext2.innerHTML = "Mäzen Belohnung eingeben";
+                    infotext2.id = "infotext2";
+                    infotext2.className = "infotitel";
+                    parent.appendChild(infotext2);
+
+                    var parent = document.getElementById("infotext2");
+                    var beschreibung2 = document.createElement("p");
+                    beschreibung2.innerHTML = "FP Belohnung für die Beteiligung (inkl. Mäzenbonus)";
+                    beschreibung2.id = "beschreibung2";
+                    beschreibung2.className = "beschreibung";
+                    parent.appendChild(beschreibung2);
+                    
+
+                    var parent = document.getElementById("beschreibung2");
+                    var maezen_bild = document.createElement("div");
+                    maezen_bild.id = "maezen_bild";
+                    parent.appendChild(maezen_bild);
+
+                    // Ernte FP
+                    var parent = document.getElementById("beschreibung2");
+                    var infotext3 = document.createElement("p");
+                    infotext3.innerHTML = "Ernte Forge Punkte eingeben";
+                    infotext3.id = "infotext3";
+                    infotext3.className = "infotitel";
+                    parent.appendChild(infotext3);
+
+                    var parent = document.getElementById("infotext3");
+                    var beschreibung3 = document.createElement("p");
+                    beschreibung3.innerHTML = "Verfügbare FP aus der Tages Ernte. OHNE Inventar FP !! ";
+                    beschreibung3.id = "beschreibung3";
+                    beschreibung3.className = "beschreibung";
+                    parent.appendChild(beschreibung3);
+                  
+                    var parent = document.getElementById("beschreibung3");
+                    var maezen_bild = document.createElement("div");
+                    maezen_bild.id = "ernte_bild";
+                    parent.appendChild(maezen_bild);
+                    
+
+
+
+
+
+
+
+
+
+                    
+            }       
+
+
+  
+
+
+
+
+
             /*
+
+
             function reload_button_hinzufuegen() {
                 var parent = document.getElementById("table1");
                 var neu_button = document.createElement("button");

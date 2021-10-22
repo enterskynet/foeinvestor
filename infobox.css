@@ -1,0 +1,40 @@
+body {
+    background-image: url("foe_back.jpg");
+}
+
+#header {
+    height: 50px;
+    width: 100px  ;
+    color: #000;
+}
+
+#h1 {
+    font-family: Helvetica;
+    font-size: 30px;
+    color:rgb(241, 159, 36)
+}
+
+#anzeigetafel { /* Anzeigebox*/
+    height: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 0px;
+    background-color: #372415;
+    border-style: groove;
+    border-color: #936538;
+    border-width: 7px;
+    border-radius: 10px;     
+}
+
+#info_tabelle {
+    height: 200px;
+    width: 150px;
+    border-style: groove;
+    border-color: tomato;
+}
+
+#info_1A {
+    height: 20px;
+    width: 50px;
+    background-color: tomato;
+}

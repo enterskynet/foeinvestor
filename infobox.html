@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fp_favi1.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="infobox.css">
+    <title>FoE Investor</title>
+</head>
+<body>
+    <h1 align=center id="h1">FoE Investor</h1>
+    <button id="button1" onclick="anzeigetafel_erstellen()">info</button>
+    
+
+
+
+    <script>
+
+        /* 
+        
+        <div id="anzeigetafel"></div> 
+    
+        
+        
+        */ 
+        function anzeigetafel_erstellen() {
+            var parent = document.getElementById("h1");
+            var anzeigetafel = document.createElement("layer");
+            anzeigetafel.id = "anzeigetafel";
+            parent.appendChild(anzeigetafel);
+
+            
+            var parent = document.getElementById("anzeigetafel");
+            var text1 = document.createElement("div");
+            text1.id = "text1";
+            text1.innerHTML = "Hallo ich bin der erste Text";
+            parent.appendChild(text1);
+
+            /* tabelle erstellen*/
+    
+      
+            let info_table = document.createElement("table");
+            info_table.id = "info_tabelle";
+            parent.appendChild(info_table);
+
+            var parent = document.getElementById("info_tablle");
+            var info_zeile1 = document.createElement('tr');
+            info_zeile1.id = "info_zeile1";
+            parent.appendChild(info_zeile1);
+
+            var parent = document.getElementById("info_zeile1");
+            var info_1A = document.createElement('td');
+            info_1A.id = "info_1A";
+            info_1A.innerHTML = "hallo";
+            parent.appendChild(info_1A);
+
+
+
+
+            /*
+            let zeile1 = document.createElement('tr');
+            parent.appendChild
+            let info_1A = document.createElement('td');
+            info_1A.innerHTML = "hallo";
+            */
+
+
+
+
+
+
+            /*
+            let info_2A = document.createElement('td');
+            info_2A.innerHTML = "ich bin der erklärungstexxt den du lesen musst. Sonst kommst du in die Hölle. Imfall!!";
+
+            zeile1.appendChild(info_1A);
+            zeile1.appendChild(info_2A);
+            */
+
+
+        
+       
+            
+
+            
+
+
+        }
+        
+
+
+    
+
+    </script>
+    
+</body>
+
+</html>
