@@ -9,7 +9,7 @@ body {
 
 #h1 {
     font-family: Helvetica;
-    font-size: 30px;
+    font-size: 25px;
     color:rgb(241, 159, 36)
 }
 
@@ -398,7 +398,11 @@ body {
 
     }
 
+    #hilfebox { 
+        height: 480px;
+        max-width: 25%;
 
+    }
 
 
      
