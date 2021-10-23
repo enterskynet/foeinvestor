@@ -1,5 +1,10 @@
+
+
 body {
+    width: 100%;
+    margin: 0 auto;
     background-image: url("foe_back.jpg");
+    
 }
 
 :root {
@@ -7,17 +12,34 @@ body {
 
   }
 
-#h1 {
-    font-family: Helvetica;
-    font-size: 25px;
-    color:rgb(241, 159, 36)
+#header {
+    margin-top: -17px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom,#000000,  #6b1f08); 
+
 }
+
+
+
+
+
+.h1 {
+    padding-top: 14px;
+    font-family: Helvetica;
+    font-size: 22px;
+    color:rgb(231, 164, 64);
+
+}
+
+
 
 #anzeigetafel { /* Anzeigebox*/
     height: 420px;
     max-width: 100%;
     margin: 0 auto;
     padding-top: 0px;
+    margin-top: 8%;
     background-color: #372415;
     border-style: groove;
     border-color: #936538;
@@ -260,7 +282,7 @@ body {
 }
 
 #zeile2 {
-    width: 28%;
+    width: 42%;
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
