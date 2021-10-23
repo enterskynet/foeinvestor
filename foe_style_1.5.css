@@ -347,7 +347,7 @@ body {
 
 #hilfebox { 
     height: 480px;
-    max-width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 0px;
     background-color: #372415;
@@ -367,19 +367,36 @@ body {
     margin-left: 50px;
 }
 
+#schliessen_button {
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 5px;
+
+
+    
+   
+
+ 
+    
+}
+
 .beschreibung {
     font-size: 10px;
     font-weight: lighter;
     color: whitesmoke;
-    margin-top: 2px;
+    margin-top: 5px;
+    text-align: center;
+
 }
 
 .infotitel {
+    margin-top: 8px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: darkorange;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+
+    
 }
 
 
