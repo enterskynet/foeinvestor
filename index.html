@@ -12,45 +12,27 @@
 <body>
     
     <header id="header">
-        
         <h1 align=center class="h1">FoE Investor beta</h1>
-
-
-
-
     </header>
-
-
-
-    
-
-    
-    
 
     <div id="anzeigetafel"> 
 
         <div id="top1">
             <p id="top_titel">LG Beteiligungs Monitor</p>
             <div><button id="info_button" onclick="infobox_erstellen()">?</button>
-            </div>
-
-            
+            </div>        
         </div>
 
-
-            
         <div  id="top2">
             <p>Überprüfe hier deine LG- Beteiligung</p>
-
         </div>
 
         <table id="table1" >
 
             <tr id="z1"> 
-                <td id="bild_arche" width="18%"></td>
-                <td id="text1" width="70%" >Platzkosten eingeben</td>
-
-                <td width="10%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" /></td>
+                <td id="bild_arche" width="15%"></td>
+                <td id="text1" width="60%" >Platzkosten eingeben</td>
+                <td width="15%" align="center" id="rahmen_eingabe" ><input type="text" id="eingabe_platzkosten" size="4" value="" class="eingabefeld" /></td>
                 <td class="fp">FP</td>
             </tr>
 
@@ -61,20 +43,18 @@
             <tr id="z1">
                 <td id="bild_roi"></td>
                 <td id="text1">Mäzen Belohnung eingeben</td>
-                <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_roi" size="4" value="" /></td>
+                <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_roi" size="4" value="" class="eingabefeld" /></td>
                 <td class="fp">FP</td>
             </tr>
             
-
             <tr id="z2">
                 <td height=10 colspan="3" id="min_warnung_zeile">  <p id="min_ernte_fp" ></p>  </td>
             </tr>
 
-            <tr id="z1">
-                 
+            <tr id="z1">     
                 <td id="bild_erntefp"></td>
                 <td id="text1">Ernte FP-Stand eingeben</td>
-                <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_ernte_fp" size="4" value="" /></td>
+                <td align="center" id="rahmen_eingabe"><input type="text" id="eingabe_ernte_fp" size="4" value="" class="eingabefeld"/></td>
                 <td class="fp">FP</td>
             </tr>
 
@@ -88,7 +68,7 @@
 
             <div id="anzeige1"></div>
             <table id="table2_off">
-                
+    
                 <tr>
                     <td id="zeile1_off" colspan="3"></td>
                 </tr>
@@ -110,15 +90,14 @@
                 <tr>
                     <td id="warnung_inventar" colspan="3"></td>
                 </tr>
+
+                <tr>
+                    <td id="fp_uebrig_bild_off"></td>
+                    <td id="fp_uebrig_off" colspan="3"></td>
+                </tr>
            
             </table>        
             
-     
-
-          
-
-
-
         </div>
 
         <script>
@@ -130,7 +109,6 @@
         var textarea = document.getElementById('eingabe_roi');
         textarea.onchange = function() {
 
-            
             var platzkosten = document.getElementById("eingabe_platzkosten").value;
             var roi = document.getElementById("eingabe_roi").value;
             var min_ernte_fp = platzkosten - roi;
@@ -139,23 +117,15 @@
             changed = true;
         }
 
-            
-
-
-
-
-            function berechnen() {
-               
+            function berechnen() {               
                 var platzkosten = document.getElementById("eingabe_platzkosten").value;
                 var roi = document.getElementById("eingabe_roi").value;
-                
-                
                 var eingezahlte_ernte_fp = document.getElementById("eingabe_ernte_fp").value;
-                
                 var benoetigte_inventar_fp = platzkosten - eingezahlte_ernte_fp;
                 var beteiligungs_verlust = platzkosten - roi;
                 var gewinn = eingezahlte_ernte_fp - beteiligungs_verlust;
                 var fp_zuwenig = platzkosten - eingezahlte_ernte_fp;
+                var ueberschuss = eingezahlte_ernte_fp - platzkosten;
 
                 // Ausgaben
                 document.getElementById('kissenbild_off').id = 'kissenbild_on'
@@ -165,12 +135,6 @@
                 document.getElementById('berechnen_button').innerHTML = "Neu"
                 document.getElementById('berechnen_button').onclick = function(){reload()}
 
-
-
-              
-                
-                
-    
                 // Gewinn Verlust Ausgabe
                 if (gewinn > -1){
                     document.getElementById('anzeige1').id = 'anzeige2'
@@ -181,8 +145,6 @@
                     document.getElementById('txt_fp_off').id = 'txt_fp'
                     document.getElementById('txt_fp').innerHTML = "FP "  
 
-                    
-
                 }   else {
                     document.getElementById('anzeige1').id = 'anzeige3'
                     document.getElementById('zeile1_off').id = 'zeile1'
@@ -191,26 +153,31 @@
                     document.getElementById('zeile2').innerHTML = gewinn
                     document.getElementById('txt_fp_off').id = 'txt_fp'
                     document.getElementById('txt_fp').innerHTML = "FP " 
-                   
-                    
+                                
                 }
 
                 if (fp_zuwenig > 0) {
                     document.getElementById('warnung_inventar').id = 'warnung_inventar_on'
                     document.getElementById('warnung_inventar_on').innerHTML = fp_zuwenig + " Inventar FP werden verwendet !!!" 
                 }
+
+                //überschuss
+                if (ueberschuss > 0) {
+                    document.getElementById('fp_uebrig_off').id = 'fp_uebrig'
+                    document.getElementById('fp_uebrig').innerHTML = "Noch " + ueberschuss + " Ernte FP übrig"        
+                    document.getElementById('fp_uebrig_bild_off').id = 'fp_uebrig_bild'
+                }
+
             }
 
 
 
-    
-    
  /*................................... Infobox ...............................................*/
 
             function infobox_erstellen() {
                     var del_anzeigetafel = document.getElementById('anzeigetafel');
                     del_anzeigetafel.remove(); // anzeigetafel entfernen
-                    var parent = document.getElementById("h1");
+                    var parent = document.getElementById("header");
                     var infobox = document.createElement("div");
                     infobox.id = "hilfebox";
                     parent.appendChild(infobox); // infobox erzeugen
@@ -218,6 +185,7 @@
                     var parent = document.getElementById('hilfebox');
                     var schliessen_button = document.createElement('button');
                     schliessen_button.innerHTML ="Schliessen";
+                    schliessen_button.id = "schliessen_button"
                     schliessen_button.onclick = function(){
                         var del_hilfebox = document.getElementById('hilfebox');
                         del_hilfebox.remove();
@@ -284,74 +252,16 @@
                     var parent = document.getElementById("beschreibung3");
                     var maezen_bild = document.createElement("div");
                     maezen_bild.id = "ernte_bild";
-                    parent.appendChild(maezen_bild);
-                    
-
-
-
-
-
-
-
-
-
-                    
+                    parent.appendChild(maezen_bild);                    
             }       
 
 
-  
-
-
-
-
-
-            /*
-
-
-            function reload_button_hinzufuegen() {
-                var parent = document.getElementById("table1");
-                var neu_button = document.createElement("button");
-                neu_button.innerHTML = " Neue Berechnung";
-           
-                
-                
-                neu_button.id = "berechnen_button";
-                neu_button.onclick = function(){reload()}
-                parent.appendChild(neu_button);
-                
-    
-            }
-            */
-            
             function reload() {
-
-                
                 location.reload();
-                return false;
-                
-    
-                
-    
-                
-             
-                
-                
-         
-                
-             
-                
+                return false;            
     
             }
         </script>
-
-
-
-
-
-
-
-
-
 
     </div>
     
