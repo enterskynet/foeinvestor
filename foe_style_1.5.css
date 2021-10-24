@@ -61,9 +61,10 @@ body {
 #top_titel {
     float: left;
 
-    text-align: left;
-    margin-left: 30px;
+    text-align: center;
+
     margin-top: 2px;
+    margin-left: 16%;
 
 }
 
@@ -208,12 +209,14 @@ body {
 #anzeige1 { /* Startanzeige */
     height: 100px;
     width: 100px;
-    transform: rotate(-70deg);
+    transform: rotate(-80deg);
     margin-top: 5px;
-    margin-left: 60%;
+
+    float: right;
     background-image: url('pfeil1.png');
     background-size: contain;
     background-repeat: no-repeat;   
+
 }
 
 #anzeige2 { /* Anzeige positiv */
@@ -285,7 +288,7 @@ body {
 }
 
 #zeile2 {
-    width: 42%;
+    width: 35%;
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
@@ -448,16 +451,11 @@ body {
 
 @media screen and (min-width:900px) {
     #anzeigetafel{
-        width: 25%;
+        width: 22%;
     }
 
-    #anzeige1 {
-        width: 120px;
-        margin-top: -50px;
-        height: 250px;
-        margin-left: 340px;
 
-    }
+ 
 
     #hilfebox { 
         height: 480px;
