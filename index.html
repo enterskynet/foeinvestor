@@ -113,7 +113,7 @@
             var roi = document.getElementById("eingabe_roi").value;
             var min_ernte_fp = platzkosten - roi;
             var response = document.getElementById('min_ernte_fp');
-            response.innerHTML = "min benötigt Ernte FP =    " + min_ernte_fp;
+            response.innerHTML = "Beteiligung ohne Verlust: min. benötigte Ernte FP =    " + min_ernte_fp;
             changed = true;
         }
 
@@ -186,7 +186,6 @@
                     var schliessen_button = document.createElement('button');
                     schliessen_button.innerHTML ="Schliessen";
                     schliessen_button.id = "schliessen_button";
-                 
                     schliessen_button.onclick = function(){
                         var del_hilfebox = document.getElementById('hilfebox');
                         del_hilfebox.remove();
