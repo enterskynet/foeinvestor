@@ -117,15 +117,23 @@
             changed = true;
         }
 
-            function berechnen() {               
-                var platzkosten = document.getElementById("eingabe_platzkosten").value;
-                var roi = document.getElementById("eingabe_roi").value;
-                var eingezahlte_ernte_fp = document.getElementById("eingabe_ernte_fp").value;
+            function berechnen() {            
+                
+                
+                var platzkosten = parseInt(document.getElementById("eingabe_platzkosten").value);
+                var roi = parseInt(document.getElementById("eingabe_roi").value);
+                var eingezahlte_ernte_fp = parseInt(document.getElementById("eingabe_ernte_fp").value);
+
+                if (eingezahlte_ernte_fp > platzkosten){
+                    eingezahlte_ernte_fp = platzkosten;
+                }
+
                 var benoetigte_inventar_fp = platzkosten - eingezahlte_ernte_fp;
                 var beteiligungs_verlust = platzkosten - roi;
-                var gewinn = eingezahlte_ernte_fp - beteiligungs_verlust;
+                
                 var fp_zuwenig = platzkosten - eingezahlte_ernte_fp;
                 var ueberschuss = eingezahlte_ernte_fp - platzkosten;
+                var gewinn = roi - benoetigte_inventar_fp;
 
                 // Ausgaben
                 document.getElementById('kissenbild_off').id = 'kissenbild_on'
